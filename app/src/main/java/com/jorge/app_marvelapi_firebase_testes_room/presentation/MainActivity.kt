@@ -1,4 +1,4 @@
-package com.jorge.app_marvelapi_firebase_testes_room
+package com.jorge.app_marvelapi_firebase_testes_room.presentation
 
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -7,6 +7,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.jorge.app_marvelapi_firebase_testes_room.R
 import com.jorge.app_marvelapi_firebase_testes_room.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

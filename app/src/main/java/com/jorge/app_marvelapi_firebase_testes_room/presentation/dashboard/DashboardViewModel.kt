@@ -1,4 +1,4 @@
-package com.jorge.app_marvelapi_firebase_testes_room.ui.dashboard
+package com.jorge.app_marvelapi_firebase_testes_room.presentation.dashboard
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

@@ -15,3 +15,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "App-MarvelAPI-Firebase-Testes-Room"
 include(":app")
+include(":core")

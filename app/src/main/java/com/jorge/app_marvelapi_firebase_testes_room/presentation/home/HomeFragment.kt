@@ -1,4 +1,4 @@
-package com.jorge.app_marvelapi_firebase_testes_room.ui.home
+package com.jorge.app_marvelapi_firebase_testes_room.presentation.home
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,9 +8,6 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.jorge.app_marvelapi_firebase_testes_room.databinding.FragmentHomeBinding
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
 
 class HomeFragment : Fragment() {
 

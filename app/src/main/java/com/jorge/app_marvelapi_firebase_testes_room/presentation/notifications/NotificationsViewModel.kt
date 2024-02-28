@@ -1,4 +1,4 @@
-package com.jorge.app_marvelapi_firebase_testes_room.ui.notifications
+package com.jorge.app_marvelapi_firebase_testes_room.presentation.notifications
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

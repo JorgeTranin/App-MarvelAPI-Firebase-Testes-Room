@@ -33,8 +33,17 @@ class MainActivity : AppCompatActivity() {
 
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                //R.id.home, R.id.favorite, R.id.info
+                R.id.home, R.id.favorite, R.id.info
             ))
+        binding.Toolbar.setupWithNavController(navController, appBarConfiguration)
+
+
+        navController.addOnDestinationChangedListener{_, destination, _ ->
+            val isTopLavelDestination = appBarConfiguration.topLevelDestinations.contains(destination.id)
+            if (isTopLavelDestination){
+                binding.Toolbar.setNavigationIcon(R.drawable.baseline_arrow_back_24)
+            }
+        }
 
     }
 }

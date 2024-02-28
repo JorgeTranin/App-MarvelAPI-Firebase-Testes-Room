@@ -8,6 +8,6 @@
     <fragment
         android:id="@+id/notificationsFragment"
         android:name="com.jorge.app_marvelapi_firebase_testes_room.presentation.info.InfoFragment"
-        android:label="fragment_notifications"
+        android:label="@string/title_info"
         tools:layout="@layout/fragment_info" />
 </navigation>

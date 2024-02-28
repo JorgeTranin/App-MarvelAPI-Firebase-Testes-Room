@@ -48,9 +48,7 @@ dependencies {
     implementation("com.google.dagger:hilt-android:2.49")
     kapt("com.google.dagger:hilt-android-compiler:2.49")
 
-    //Retrofit
-    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+
 
     //Room
     val room_version = "2.6.1"
@@ -68,7 +66,7 @@ dependencies {
 
     // Other Libs
     implementation ("com.facebook.shimmer:shimmer:0.5.0")
-    implementation ("com.google.code.gson:gson:2.10.1")
+
     implementation ("androidx.datastore:datastore-preferences:1.0.0")
 
     implementation("androidx.core:core-ktx:1.12.0")

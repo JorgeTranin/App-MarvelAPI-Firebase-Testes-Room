@@ -5,8 +5,8 @@ plugins {
     id("com.google.dagger.hilt.android")
     id ("kotlin-parcelize")
 }
-
 android {
+
     namespace = "com.jorge.app_marvelapi_firebase_testes_room"
     compileSdk = 34
 

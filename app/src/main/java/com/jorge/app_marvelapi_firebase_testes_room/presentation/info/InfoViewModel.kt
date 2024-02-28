@@ -1,10 +1,10 @@
-package com.jorge.app_marvelapi_firebase_testes_room.presentation.notifications
+package com.jorge.app_marvelapi_firebase_testes_room.presentation.info
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class NotificationsViewModel : ViewModel() {
+class InfoViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
         value = "This is notifications Fragment"

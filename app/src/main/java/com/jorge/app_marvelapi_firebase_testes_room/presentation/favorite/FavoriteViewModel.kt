@@ -1,10 +1,10 @@
-package com.jorge.app_marvelapi_firebase_testes_room.presentation.dashboard
+package com.jorge.app_marvelapi_firebase_testes_room.presentation.favorite
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class DashboardViewModel : ViewModel() {
+class FavoriteViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
         value = "This is dashboard Fragment"

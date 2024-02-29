@@ -1,17 +1,12 @@
 package com.jorge.app_marvelapi_firebase_testes_room.framework.di
 
 import com.facebook.shimmer.BuildConfig
-import com.jorge.core.data.network.api.AuthInterceptor
-import com.jorge.core.data.network.api.MarvelApi
-import com.jorge.core.data.network.api.PUBLIC_KEY
-import dagger.Binds
+import com.jorge.core.data.network.api.interceptor.AuthInterceptor
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import okhttp3.Interceptor
 import okhttp3.OkHttpClient
-import okhttp3.Response
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -34,17 +29,14 @@ object NetworkModule {
             )
         }
     }
-/*
 
     @Provides
     fun provideAuthorizationInterceptor(): AuthInterceptor {
         return AuthInterceptor(
-            publicKey = BuildConfig.,
-            privateKey = BuildConfig.PRIVATE_KEY,
             calendar = Calendar.getInstance(TimeZone.getTimeZone("UTC"))
         )
     }
-*/
+
 
     @Provides
     fun provideOkHttpClient(
@@ -52,7 +44,7 @@ object NetworkModule {
         authorizationInterceptor: AuthInterceptor
     ): OkHttpClient {
         return OkHttpClient.Builder()
-            //.addInterceptor(loggingInterceptor)
+            .addInterceptor(loggingInterceptor)
             .addInterceptor(authorizationInterceptor)
             .readTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS)
             .connectTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS)

@@ -4,6 +4,7 @@ plugins {
     kotlin("kapt")
     id("com.google.dagger.hilt.android")
     id ("kotlin-parcelize")
+
 }
 android {
 
@@ -66,7 +67,6 @@ dependencies {
 
     // Other Libs
     implementation ("com.facebook.shimmer:shimmer:0.5.0")
-
     implementation ("androidx.datastore:datastore-preferences:1.0.0")
 
     implementation("androidx.core:core-ktx:1.12.0")

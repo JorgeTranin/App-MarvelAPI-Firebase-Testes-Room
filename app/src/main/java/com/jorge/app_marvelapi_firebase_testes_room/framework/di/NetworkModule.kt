@@ -17,54 +17,57 @@ import java.util.concurrent.TimeUnit
 @Module
 @InstallIn(SingletonComponent::class)
 object NetworkModule {
-    private const val TIMEOUT_SECONDS = 15L
+/*
+private const val TIMEOUT_SECONDS = 15L
 
-    @Provides
-    fun provideLoggingInterceptor(): HttpLoggingInterceptor {
-        return HttpLoggingInterceptor().apply{
-            setLevel(
-                if (BuildConfig.DEBUG) {
-                    HttpLoggingInterceptor.Level.BODY
-                } else HttpLoggingInterceptor.Level.NONE
-            )
-        }
-    }
-
-    @Provides
-    fun provideAuthorizationInterceptor(): AuthInterceptor {
-        return AuthInterceptor(
-            calendar = Calendar.getInstance(TimeZone.getTimeZone("UTC"))
+@Provides
+fun provideLoggingInterceptor(): HttpLoggingInterceptor {
+    return HttpLoggingInterceptor().apply{
+        setLevel(
+            if (BuildConfig.DEBUG) {
+                HttpLoggingInterceptor.Level.BODY
+            } else HttpLoggingInterceptor.Level.NONE
         )
     }
+}
+
+@Provides
+fun provideAuthorizationInterceptor(): AuthInterceptor {
+    return AuthInterceptor(
+        calendar = Calendar.getInstance(TimeZone.getTimeZone("UTC"))
+    )
+}
 
 
-    @Provides
-    fun provideOkHttpClient(
-        loggingInterceptor: HttpLoggingInterceptor,
-        authorizationInterceptor: AuthInterceptor
-    ): OkHttpClient {
-        return OkHttpClient.Builder()
-            .addInterceptor(loggingInterceptor)
-            .addInterceptor(authorizationInterceptor)
-            .readTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS)
-            .connectTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS)
-            .build()
-    }
+@Provides
+fun provideOkHttpClient(
+    loggingInterceptor: HttpLoggingInterceptor,
+    authorizationInterceptor: AuthInterceptor
+): OkHttpClient {
+    return OkHttpClient.Builder()
+        .addInterceptor(loggingInterceptor)
+        .addInterceptor(authorizationInterceptor)
+        .readTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS)
+        .connectTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS)
+        .build()
+}
 
-    @Provides
-    fun provideGsonConverterFactory(): GsonConverterFactory {
-        return GsonConverterFactory.create()
-    }
+@Provides
+fun provideGsonConverterFactory(): GsonConverterFactory {
+    return GsonConverterFactory.create()
+}
 
 
 
-    @Provides
-    fun provideRetrofit(
-        okHttpClient: OkHttpClient,
-        converterFactory: GsonConverterFactory
-    ): Retrofit {
-        return Retrofit.Builder().baseUrl("https://gateway.marvel.com:443/v1/public/")
-            .addConverterFactory(converterFactory).client(okHttpClient).build()
-    }
+@Provides
+fun provideRetrofit(
+    okHttpClient: OkHttpClient,
+    converterFactory: GsonConverterFactory
+): Retrofit {
+    return Retrofit.Builder().baseUrl("https://gateway.marvel.com:443/v1/public/")
+        .addConverterFactory(converterFactory).client(okHttpClient).build()
+}
+
+ */
 
 }
